@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             line-height: 1.8;
             color: #333;
         }
+
         header {
             background: linear-gradient(135deg, #ff7e5f, #feb47b);
             color: white;
@@ -20,16 +22,19 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         header h1 {
             margin: 0;
             font-size: 2.5em;
             font-weight: bold;
         }
+
         header p {
             margin: 5px 0 0;
             font-size: 1.3em;
             font-style: italic;
         }
+
         main {
             max-width: 850px;
             margin: 40px auto;
@@ -39,17 +44,21 @@
             border-radius: 10px;
             line-height: 1.8;
         }
+
         h2 {
             color: #ff7e5f;
             border-bottom: 2px solid #feb47b;
             padding-bottom: 8px;
         }
+
         ul {
             padding-left: 25px;
         }
+
         ul li {
             margin-bottom: 12px;
         }
+
         footer {
             text-align: center;
             padding: 15px 0;
@@ -59,74 +68,207 @@
             margin-top: 40px;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
+
         a {
             color: #ff7e5f;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .highlight {
             background-color: #fff3e0;
             padding: 0 5px;
             border-radius: 4px;
         }
+
+        #language-switcher {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>プライバシーポリシー</h1>
-        <p>安心してWaiDDyの旅を楽しもう</p>
+        <h1 id="privacy-policy-title">プライバシーポリシー</h1>
+        <p id="privacy-policy-subtitle">安心してWaiDDyの旅を楽しもう</p>
+        <div id="language-switcher">
+            <button onclick="switchLanguage('ja')">日本語</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
     </header>
     <main>
-        <p>WaiDDyでは、ユーザーのプライバシーを大切にし、情報の透明性を保つことをお約束します。以下は、私たちが収集する情報とその活用方法についての詳細です。</p>
-        
-        <h2>1. 収集する情報</h2>
-        <p>私たちは、サービス向上のために必要な情報のみを収集します：</p>
-        <ul>
+        <p id="privacy-policy-intro">WaiDDyでは、ユーザーのプライバシーを大切にし、情報の透明性を保つことをお約束します。以下は、私たちが収集する情報とその活用方法についての詳細です。</p>
+
+        <h2 id="data-collection-title">1. 収集する情報</h2>
+        <p id="data-collection-description">私たちは、サービス向上のために必要な情報のみを収集します：</p>
+        <ul id="data-collection-list">
             <li>アカウント作成時の<b class="highlight">基本情報</b>（名前、メールアドレスなど）</li>
             <li><b class="highlight">旅行プランのリクエスト内容</b>（行き先、好みなど）</li>
             <li>編集・保存されたプランや旅行履歴</li>
             <li>デバイスおよび利用状況情報（例：アプリの使用頻度）</li>
         </ul>
-        
-        <h2>2. 情報の活用方法</h2>
-        <p>収集した情報は、以下のように活用します：</p>
-        <ul>
+
+        <h2 id="data-usage-title">2. 情報の活用方法</h2>
+        <p id="data-usage-description">収集した情報は、以下のように活用します：</p>
+        <ul id="data-usage-list">
             <li>より個別化された旅行プランの生成</li>
             <li>過去のデータに基づくおすすめ旅行の提案</li>
             <li>技術的な問題の早期解決</li>
             <li>サービス全体の向上と最適化</li>
         </ul>
-        
-        <h2>3. 情報の共有</h2>
-        <p>ユーザーの同意がない限り、個人情報を第三者に提供することはありません。ただし、以下のケースでは例外があります：</p>
-        <ul>
+
+        <h2 id="data-sharing-title">3. 情報の共有</h2>
+        <p id="data-sharing-description">ユーザーの同意がない限り、個人情報を第三者に提供することはありません。ただし、以下のケースでは例外があります：</p>
+        <ul id="data-sharing-list">
             <li>外部予約サイトへのリンクを利用する場合</li>
             <li>法令遵守が必要な場合</li>
         </ul>
-        
-        <h2>4. セキュリティ対策</h2>
-        <p>情報保護のために、以下のようなセキュリティ対策を実施しています：</p>
-        <ul>
+
+        <h2 id="security-title">4. セキュリティ対策</h2>
+        <p id="security-description">情報保護のために、以下のようなセキュリティ対策を実施しています：</p>
+        <ul id="security-list">
             <li>最新の<b class="highlight">SSL暗号化技術</b>によるデータ保護</li>
             <li>不正アクセスを防ぐ認証システム</li>
             <li>定期的なセキュリティレビュー</li>
         </ul>
-        
-        <h2>5. クッキー（Cookie）の利用</h2>
-        <p>WaiDDyでは、以下の目的でクッキーを使用しています：</p>
-        <ul>
+
+        <h2 id="cookies-title">5. クッキー（Cookie）の利用</h2>
+        <p id="cookies-description">WaiDDyでは、以下の目的でクッキーを使用しています：</p>
+        <ul id="cookies-list">
             <li>快適なユーザー体験を提供するための<b class="highlight">セッション管理</b></li>
             <li>サービスの利用状況を解析して改善するため</li>
         </ul>
-        
-        <h2>6. お問い合わせ</h2>
-        <p>プライバシーに関するご質問や懸念がございましたら、以下のメールアドレスまでお気軽にお問い合わせください：</p>
-        <p><a href="mailto:watwatwhat.lab@gmail.com">watwatwhat.lab@gmail.com</a></p>
+
+        <h2 id="contact-title">6. お問い合わせ</h2>
+        <p id="contact-description">プライバシーに関するご質問や懸念がございましたら、以下のメールアドレスまでお気軽にお問い合わせください：</p>
+        <p id="contact-email"><a href="mailto:watwatwhat.lab@gmail.com">watwatwhat.lab@gmail.com</a></p>
     </main>
     <footer>
         &copy; 2024 WaiDDy | All Rights Reserved.
     </footer>
+    <script>
+        const translations = {
+            en: {
+                "privacy-policy-title": "Privacy Policy",
+                "privacy-policy-subtitle": "Enjoy your journey with WaiDDy",
+                "privacy-policy-intro": "At WaiDDy, we value your privacy and are committed to transparency in handling your information. Here's how we collect and use your data.",
+                "data-collection-title": "1. Data We Collect",
+                "data-collection-description": "We collect only the information necessary to improve our services:",
+                "data-collection-list": [
+                    "Basic account information (e.g., name, email address)",
+                    "Travel plan requests (e.g., destinations, preferences)",
+                    "Edited or saved plans and travel history",
+                    "Device and usage data (e.g., app usage frequency)"
+                ],
+                "data-usage-title": "2. How We Use Your Data",
+                "data-usage-description": "We use the collected information as follows:",
+                "data-usage-list": [
+                    "To create personalized travel plans",
+                    "To suggest trips based on past data",
+                    "To resolve technical issues quickly",
+                    "To optimize and improve the overall service"
+                ],
+                "data-sharing-title": "3. Data Sharing",
+                "data-sharing-description": "We do not share personal information with third parties without your consent, except in the following cases:",
+                "data-sharing-list": [
+                    "When using links to external booking sites",
+                    "When required by law"
+                ],
+                "security-title": "4. Security Measures",
+                "security-description": "To protect your data, we implement the following measures:",
+                "security-list": [
+                    "Data protection using the latest SSL encryption technology",
+                    "Authentication systems to prevent unauthorized access",
+                    "Regular security reviews"
+                ],
+                "cookies-title": "5. Use of Cookies",
+                "cookies-description": "We use cookies for the following purposes:",
+                "cookies-list": [
+                    "Session management for a seamless user experience",
+                    "Analyzing usage to improve the service"
+                ],
+                "contact-title": "6. Contact Us",
+                "contact-description": "If you have any questions or concerns about privacy, feel free to contact us at:",
+                "contact-email": "watwatwhat.lab@gmail.com"
+            },
+            ja: {
+                "privacy-policy-title": "プライバシーポリシー",
+                "privacy-policy-subtitle": "安心してWaiDDyの旅を楽しもう",
+                "privacy-policy-intro": "WaiDDyでは、ユーザーのプライバシーを大切にし、情報の透明性を保つことをお約束します。以下は、私たちが収集する情報とその活用方法についての詳細です。",
+                "data-collection-title": "1. 収集する情報",
+                "data-collection-description": "私たちは、サービス向上のために必要な情報のみを収集します：",
+                "data-collection-list": [
+                    "アカウント作成時の基本情報（名前、メールアドレスなど）",
+                    "旅行プランのリクエスト内容（行き先、好みなど）",
+                    "編集・保存されたプランや旅行履歴",
+                    "デバイスおよび利用状況情報（例：アプリの使用頻度）"
+                ],
+                "data-usage-title": "2. 情報の活用方法",
+                "data-usage-description": "収集した情報は、以下のように活用します：",
+                "data-usage-list": [
+                    "より個別化された旅行プランの生成",
+                    "過去のデータに基づくおすすめ旅行の提案",
+                    "技術的な問題の早期解決",
+                    "サービス全体の向上と最適化"
+                ],
+                "data-sharing-title": "3. 情報の共有",
+                "data-sharing-description": "ユーザーの同意がない限り、個人情報を第三者に提供することはありません。ただし、以下のケースでは例外があります：",
+                "data-sharing-list": [
+                    "外部予約サイトへのリンクを利用する場合",
+                    "法令遵守が必要な場合"
+                ],
+                "security-title": "4. セキュリティ対策",
+                "security-description": "情報保護のために、以下のようなセキュリティ対策を実施しています：",
+                "security-list": [
+                    "最新のSSL暗号化技術によるデータ保護",
+                    "不正アクセスを防ぐ認証システム",
+                    "定期的なセキュリティレビュー"
+                ],
+                "cookies-title": "5. クッキー（Cookie）の利用",
+                "cookies-description": "WaiDDyでは、以下の目的でクッキーを使用しています：",
+                "cookies-list": [
+                    "快適なユーザー体験を提供するためのセッション管理",
+                    "サービスの利用状況を解析して改善するため"
+                ],
+                "contact-title": "6. お問い合わせ",
+                "contact-description": "プライバシーに関するご質問や懸念がございましたら、以下のメールアドレスまでお気軽にお問い合わせください：",
+                "contact-email": "watwatwhat.lab@gmail.com"
+            }
+
+        };
+
+        let currentLang = navigator.language.startsWith('ja') ? 'ja' : 'en';
+
+        function switchLanguage(lang) {
+            console.log(`Changing to ${lang}...`);
+            try {
+                currentLang = lang;
+                document.querySelectorAll('[id]').forEach(element => {
+                    const id = element.id;
+                    if (translations[lang] && translations[lang][id]) {
+                        if (Array.isArray(translations[lang][id])) {
+                            // リスト要素を処理
+                            element.innerHTML = translations[lang][id]
+                                .map(item => `<li>${item}</li>`)
+                                .join('');
+                        } else {
+                            // 通常の要素を処理
+                            element.textContent = translations[lang][id];
+                        }
+                    }
+                });
+            }
+            catch (e) {
+                console.error(e);
+            }
+
+        }
+    </script>
 </body>
+
 </html>
